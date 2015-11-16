@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
-import Animate from 'rc-animate';
+import {Collapse} from 'react-bootstrap';
 
 export default class SidebarProfileMenu extends React.Component {
   constructor(props) {
@@ -76,9 +76,11 @@ export default class SidebarProfileMenu extends React.Component {
       }
 
       childrenContainer = (
-        <ul className={containerClass}>
-          {childrenElements}
-        </ul>
+        <Collapse in={this.isOpen(menu)}>
+          <ul className={containerClass}>
+            {childrenElements}
+          </ul>
+        </Collapse>
       );
     }
 
@@ -101,13 +103,11 @@ export default class SidebarProfileMenu extends React.Component {
       );
 
     return (
-      <Animate component='' transitionName="fade">
         <li className={className}>
           {content}
 
           {childrenContainer}
         </li>
-      </Animate>
     );
   }
 }
