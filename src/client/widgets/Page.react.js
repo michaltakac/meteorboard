@@ -1,6 +1,6 @@
 import Component from 'react-pure-render/component';
 import DocumentTitle from 'react-document-title';
-import {Row} from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../app/components/PageHeader.react';
@@ -24,27 +24,33 @@ export default class Page extends Component {
             <PageHeader />
           </Row>
           <Row>
-            <Box bodyClass='box-body big'
-                 gridWidth={4}
-                 icon='fa fa-bars'
-                 title='Box 1'
-                 titleClass='box'>
-              {msg.dummyText}
-            </Box>
-            <Box bodyClass='box-body big'
-                 gridWidth={4}
-                 icon='fa fa-bars'
-                 title='Box 2'
-                 titleClass='box border'>
-              {msg.dummyText}
-            </Box>
-            <Box bodyClass='box-body big'
-                 gridWidth={4}
-                 icon='fa fa-bars'
-                 title='Box 3'
-                 titleClass='box border orange'>
-              {msg.dummyText}
-            </Box>
+
+            <Col sm={4}>
+              <Box bodyClass='box-body big'
+                   icon='fa fa-bars'
+                   title='Box 1'
+                   titleClass='box'>
+                {msg.dummyText}
+              </Box>
+            </Col>
+
+            <Col sm={4}>
+              <Box bodyClass='box-body big'
+                   icon='fa fa-bars'
+                   title='Box 2'
+                   titleClass='box border'>
+                {msg.dummyText}
+              </Box>
+            </Col>
+
+            <Col sm={4}>
+              <Box bodyClass='box-body big'
+                   icon='fa fa-bars'
+                   title='Box 3'
+                   titleClass='box border orange'>
+                {msg.dummyText}
+              </Box>
+            </Col>
           </Row>
           <FooterTools />
         </div>
