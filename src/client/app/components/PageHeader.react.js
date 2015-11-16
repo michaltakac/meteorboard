@@ -4,6 +4,10 @@ import {Col} from 'react-bootstrap';
 import {Link} from 'react-router';
 
 export default class PageHeader extends Component {
+  static propTypes = {
+    description: PropTypes.string,
+    title: PropTypes.string.isRequired
+  }
 
   render() {
     return (
@@ -14,12 +18,12 @@ export default class PageHeader extends Component {
               <i className="fa fa-home"></i>
               <Link to="/">Home</Link>
             </li>
-            <li>Widgets & Box</li>
+            <li>{this.props.title}</li>
           </ul>
           <div className="clearfix">
-            <h3 className="content-title pull-left">Widgets & Box</h3>
+            <h3 className="content-title pull-left">{this.props.title}</h3>
           </div>
-          <div className="description">Widget Boxes, Nested Boxes, Portlets, Draggable Portlets etc.</div>
+          <div className="description">{this.props.description}</div>
         </div>
       </Col>
     );

@@ -21,7 +21,7 @@ export default class Page extends Component {
       <DocumentTitle title={msg.title}>
         <div>
           <Row>
-            <PageHeader />
+            <PageHeader description={msg.description} title={msg.title} />
           </Row>
           <Row>
 

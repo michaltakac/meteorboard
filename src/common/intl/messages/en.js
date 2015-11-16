@@ -55,6 +55,7 @@ export default {
       },
       button: 'Submit'
     },
+    description: 'Description from Intl...',
     inline: {
       email: {
         placeholder: 'Enter email'
@@ -78,6 +79,7 @@ export default {
       },
       button: 'Sign in'
     },
+    title: 'Forms'
   },
   home: {
     // // TODO: Android text.
@@ -136,6 +138,7 @@ export default {
     title: 'Settings'
   },
   widgets: {
+    description: 'Description from Intl...',
     dummyText: 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.',
     title: 'Widgets and Boxes',
   },

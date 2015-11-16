@@ -16,7 +16,7 @@ export default class Page extends Component {
   }
 
   render() {
-    const {msg: {widgets: msg}} = this.props;
+    const {msg: {forms: msg}} = this.props;
 
     const tooltipFocus = <Tooltip>Tooltip on focus.</Tooltip>;
     const tooltipHover = <Tooltip>Tooltip on hover.</Tooltip>;
@@ -25,7 +25,7 @@ export default class Page extends Component {
       <DocumentTitle title={msg.title}>
         <div>
           <Row>
-            <PageHeader />
+            <PageHeader description={msg.description} title={msg.title} />
           </Row>
 
           <Row>
