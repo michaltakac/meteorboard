@@ -22,7 +22,7 @@ export default class Page extends Component {
       <DocumentTitle title={msg.title}>
         <div>
           <Row>
-            <PageHeader />
+            <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
           </Row>
           <Row>
             <Col md={12}>

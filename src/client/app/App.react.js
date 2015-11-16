@@ -1,6 +1,4 @@
 //import './less/my-bootstrap-theme.less';
-
-
 import './main.less';
 import Component from 'react-pure-render/component';
 import constructSidebarMenu from '../../common/lib/constructSidebarMenu';

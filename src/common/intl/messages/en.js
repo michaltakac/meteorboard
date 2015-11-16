@@ -82,11 +82,27 @@ export default {
     title: 'Forms'
   },
   home: {
-    // // TODO: Android text.
-    // androidInfoText: ``,
+    description: 'Home page of Meteorboard admin panel.',
+    menu: [
+      {
+        link: '/',
+        title: 'Menu 1'
+      },
+      {
+        link: '/',
+        title: 'Menu 2'
+      },
+      {
+        link: '/',
+        title: 'Menu 3'
+      },
+      {
+        link: '/',
+        title: 'Menu 4'
+      }
+    ],
     infoHtml: '<a href="https://github.com/este/este">Este.js</a> dev stack.',
-    iosInfoText: `Este.js dev stack.\n\nOpen left menu and check todos!\n\nPress CMD+R to reload.\nPress CMD+D for debug menu.`,
-    title: 'Este.js',
+    title: 'Meteorboard',
     toCheck: {
       andMuchMore: 'And much more :-)',
       h2: 'Things to Check',

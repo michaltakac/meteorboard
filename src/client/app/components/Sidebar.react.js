@@ -2,6 +2,7 @@ import Component from 'react-pure-render/component';
 import React, {PropTypes} from 'react';
 import SidebarProfileMenu from './SidebarProfileMenu.react';
 import {Image} from 'react-bootstrap';
+import {Link} from 'react-router';
 
 export default class Sidebar extends Component {
 
@@ -25,7 +26,9 @@ export default class Sidebar extends Component {
     return (
 
       <div className={miniMenu} id="sidebar">
-        <Image circle className='profile-pic' src="img/addressbook/3.jpg" />
+        <Link to='/'>
+          <Image circle className='profile-pic' src="img/addressbook/3.jpg" />
+        </Link>
         <div className="sidebar-menu nav-collapse">
           <div className="divide-20"></div>
           <ul /*className="nav nav-sidebar"*/>
