@@ -60,7 +60,7 @@ export default class App extends Component {
     const {location: {pathname}, msg, users: {viewer}, ui, actions} = this.props;
 
     const sidebarOpen = ui.isSideMenuOpen;
-    const className = sidebarOpen ? 'margin-left-50' : '';
+    const className = sidebarOpen ? 'margin-left-60' : '';
 
     return (
       <div>
