@@ -16,19 +16,14 @@ export default class Header extends Component {
 
   render() {
     const {msg: {app: {links: msg}}, viewer, actions, ui} = this.props;
-    const NotificationButton = (<HeaderButton badgeNumber={3} iconName='fa fa-envelope' />);
+    const NotificationButton = <HeaderButton badgeNumber={3} iconName='fa fa-envelope' />;
     const arrowOrientation = ui.isSideMenuOpen ? 'fa fa-angle-right' : 'fa fa-angle-left';
+    const navbarClassName = ui.isSideMenuOpen
+          ? 'navbar clearfix mini-menu-open'
+          : 'navbar clearfix';
 
     return (
-      <header className='navbar clearfix' id='header'>
-        <div className='container'>
-          <div className='navbar-brand'>
-
-            <Link to='/'>
-              <Image className='img-responsive' src='img/logo/logo.png' style={{height: '30px', width: '120px'}} />
-            </Link>
-          </div>
-
+      <header className={navbarClassName} id='header'>
           <div className='nav navbar-nav pull-left hidden-xs' id='navbar-left'>
 
               <div className='sidebar-collapse btn pull-left' onClick={actions.toggleSideMenu}>
@@ -66,7 +61,7 @@ export default class Header extends Component {
               </li>
               <li>
                 <Link to='#'>
-                  <img src='img/avatars/avatar1.jpg' alt='' />
+                  <img src='img/avatars/avatar1.jpg' />
                   <span className='body'>
                     <span className='from'>Vince Pelt</span>
                     <span className='message'>
@@ -113,7 +108,7 @@ export default class Header extends Component {
                 </li>
                 <li>
                   <a href='#'>
-                    <img src='img/avatars/avatar2.jpg' alt='' />
+                    <img src='img/avatars/avatar2.jpg' />
                     <span className='body'>
                       <span className='from'>Jane Doe</span>
                       <span className='message'>
@@ -129,7 +124,7 @@ export default class Header extends Component {
                 </li>
                 <li>
                   <a href='#'>
-                    <img src='img/avatars/avatar1.jpg' alt='' />
+                    <img src='img/avatars/avatar1.jpg' />
                     <span className='body'>
                       <span className='from'>Vince Pelt</span>
                       <span className='message'>
@@ -145,7 +140,7 @@ export default class Header extends Component {
                 </li>
                 <li>
                   <a href='#'>
-                    <img src='img/avatars/avatar8.jpg' alt='' />
+                    <img src='img/avatars/avatar8.jpg' />
                     <span className='body'>
                       <span className='from'>Debby Doe</span>
                       <span className='message'>
@@ -253,7 +248,7 @@ export default class Header extends Component {
 
             <li className='dropdown user' id='header-user'>
               <a className='dropdown-toggle' data-toggle='dropdown' href='#'>
-                <img alt='' src='img/avatars/avatar3.jpg' />
+                <img src='img/avatars/avatar3.jpg' />
                 <span className='username'>John Doe</span>
                 <i className='fa fa-angle-down'></i>
               </a>
@@ -265,7 +260,6 @@ export default class Header extends Component {
               </ul>
             </li>
           </ul>
-        </div>
       </header>
       /*<Navbar>
         <NavBrand><a href='#'>Meteorboard</a></NavBrand>

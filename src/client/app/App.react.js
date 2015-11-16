@@ -62,13 +62,13 @@ export default class App extends Component {
     return (
       <div>
         <Header actions={actions} msg={msg} pathname={pathname} viewer={viewer} ui={ui} />
+        <Sidebar location={pathname} menuViews={this.createMenu()} ui={ui} />
         {/* Pass data-pathname to allow route specific styling. */}
-        <section id="page">
-          <Sidebar location={pathname} menuViews={this.createMenu()} ui={ui} />
-          <div className={className} id="main-content">
+        <section id='page'>
+          <div className={className} id='main-content'>
             <Grid>
               <Row>
-                <Col id="content" lg={12}>
+                <Col id='content' lg={12}>
                   <Row>
                     <Col md={12}>
                       <RouterHandler {...this.props} />
@@ -79,8 +79,8 @@ export default class App extends Component {
             </Grid>
           </div>
         </section>
-        {/*<div className="container-fluid" data-pathname={pathname}>
-          <div className="row">
+        {/*<div className='container-fluid' data-pathname={pathname}>
+          <div className='row'>
             {/* Pathname enforces rerender so activeClassName is updated.
             <Header msg={msg} pathname={pathname} viewer={viewer} />
             <RouterHandler {...this.props} />

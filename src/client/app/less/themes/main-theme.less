@@ -43,7 +43,7 @@
     background: none repeat scroll 0 0 @navbar-primary;
     border: none;
     border-radius: 0;
-    margin: 0;
+    margin: 0 0 0 250px;
     height: 50px;
     .navbar-brand {
         background-color: @navbar-secondary;
@@ -183,6 +183,9 @@
           right: 0;
         }
     }
+}
+.navbar.mini-menu-open {
+  margin: 0 0 0 50px;
 }
 .navbar {
     .nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a :focus{
@@ -391,6 +394,7 @@
     padding: 0 !important;
     width: 250px;
     position: absolute;
+    top: 0;
     height: 100%;
 }
 .sidebar-fixed {
