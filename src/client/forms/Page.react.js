@@ -36,15 +36,9 @@ export default class Page extends Component {
                 {/* Basic form example */}
                 <h3 className="form-title">Basic Example</h3>
                 <form role="form">
-                  <div className="form-group">
-                    <Input className="form-control" label="Email address" placeholder="Enter email" type="email" />
-                  </div>
-                  <div className="form-group">
-                    <Input className="form-control" label="Password" placeholder="Password" type="password" />
-                  </div>
-                  <div className="checkbox">
-                    <Input type="checkbox" label="Check me out" />
-                  </div>
+                  <Input label="Email address" placeholder="Enter email" type="email" />
+                  <Input label="Password" placeholder="Password" type="password" />
+                  <Input label="Check me out" type="checkbox" />
                   <ButtonInput className="btn btn-success" type="submit" value="Submit" />
                 </form>
 
@@ -53,12 +47,8 @@ export default class Page extends Component {
                 {/* Inline form example */}
                 <h3 className="form-title">Inline form</h3>
                 <form className="form-inline" role="form">
-                  <div className="form-group">
-                    <Input className="form-control" placeholder="Enter email" type="email" />
-                  </div>
-                  <div className="form-group">
-                    <Input className="form-control" placeholder="Password" type="password" />
-                  </div>
+                  <Input placeholder="Enter email" type="email" />
+                  <Input placeholder="Password" type="password" />
                   <ButtonInput className="btn btn-inverse" type="submit" value="Sign in" />
                 </form>
 
@@ -67,14 +57,12 @@ export default class Page extends Component {
                 {/* Horizontal form example */}
                 <h3 className="form-title">Horizontal form</h3>
                 <form className="form-horizontal" role="form">
-                  <Input className="form-control"
-                         label="Email"
+                  <Input label="Email"
                          labelClassName="col-sm-2 control-label"
                          placeholder="Email"
                          type="email"
                          wrapperClassName="col-sm-10" />
-                  <Input className="form-control"
-                         label="Password"
+                  <Input label="Password"
                          labelClassName="col-sm-2 control-label"
                          placeholder="Password"
                          type="password"
@@ -96,13 +84,13 @@ export default class Page extends Component {
                    titleClass='box border purple'>
                 <Row>
                   <Col xs="2">
-                    <Input className="form-control" placeholder=".col-xs-2" type="text" />
+                    <Input placeholder=".col-xs-2" type="text" />
                   </Col>
                   <Col xs="3">
-                    <Input className="form-control" placeholder=".col-xs-3" type="text" />
+                    <Input placeholder=".col-xs-3" type="text" />
                   </Col>
                   <Col xs="4">
-                    <Input className="form-control" placeholder=".col-xs-4" type="text" />
+                    <Input placeholder=".col-xs-4" type="text" />
                   </Col>
                 </Row>
               </Box>
@@ -116,16 +104,13 @@ export default class Page extends Component {
                 {/* Inline form example */}
                 <h3 className="form-title">Supported controls</h3>
                 <form className="form-horizontal" role="form">
-                  <Input className="form-control"
-                         label="Inputs"
+                  <Input label="Inputs"
                          labelClassName="col-sm-3 control-label"
                          placeholder="Text input"
                          type="text"
                          wrapperClassName="col-sm-9" />
-                  <Input className="form-control"
-                         label="Password"
+                  <Input label="Textarea"
                          labelClassName="col-sm-3 control-label"
-                         placeholder="Password"
                          type="textarea"
                          wrapperClassName="col-sm-9" />
                   <Input label="Inline checkboxes" labelClassName="col-sm-3 control-label" wrapperClassName="col-sm-9">
@@ -146,6 +131,30 @@ export default class Page extends Component {
                                type="checkbox" />
                       </Col>
                     </Row>
+                  </Input>
+                  <Input label="Select"
+                         labelClassName="col-sm-3 control-label"
+                         placeholder="select"
+                         type="select"
+                         wrapperClassName="col-sm-9">
+                    <option value="select">select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </Input>
+                  <Input label="Multiple Select"
+                         labelClassName="col-sm-3 control-label"
+                         type="select"
+                         wrapperClassName="col-sm-9"
+                         multiple>
+                    <option value="select">select (multiple)</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </Input>
                 </form>
               </Box>
