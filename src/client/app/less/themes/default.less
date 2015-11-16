@@ -89,6 +89,7 @@
 		}
 	}
 	#navbar-left {
+    height: 50px;
 		li.dropdown {
 			background-color: lighten(@navbar-primary, 5%);
 			border-right: 1px solid darken(@navbar-primary, 5%);
@@ -136,9 +137,9 @@
 		font-weight: 600;
 		line-height: 30px;
 		padding: 5px 10px;
-		i { 
+		i {
 			margin-right: 5px;
-		}	
+		}
 	}
 	.footer {
 		display: block;
@@ -326,7 +327,7 @@
   margin: 0;
   padding: 0;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   margin-top:15px;
   border-bottom: 1px solid #FFFFFF !important;
   border-top: 1px solid #FFFFFF !important;
@@ -335,7 +336,7 @@
 .sidebar-menu > ul > li {
   display: block;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   border: 0px;
 }
 
@@ -375,11 +376,11 @@
 }
 
 .sidebar-menu > ul > li.active > a {
-  border: none; 
+  border: none;
   text-shadow:none;
 }
 
-.sidebar-menu ul > li > a .arrow:before {  
+.sidebar-menu ul > li > a .arrow:before {
    float: right;
    margin-top: 1px;
    margin-right: 5px;
@@ -505,18 +506,18 @@
    color: @sidebar-icons;
 }
 
-.sidebar-menu > ul > li.has-sub.open >a, 
-.sidebar-menu > ul > li >a:hover, 
-.sidebar-menu > ul > li:hover>a,{  
+.sidebar-menu > ul > li.has-sub.open >a,
+.sidebar-menu > ul > li >a:hover,
+.sidebar-menu > ul > li:hover>a,{
   background: @sidebar-hover;
 }
 
-.sidebar-menu > ul > li.has-sub.open > ul > li.has-sub-sub.open > a {  
+.sidebar-menu > ul > li.has-sub.open > ul > li.has-sub-sub.open > a {
   background: @sidebar-hover;
 }
 
 .sidebar-menu > ul > li.active > a{
-  background: @sidebar-active !important;  
+  background: @sidebar-active !important;
   border-top-color: transparent !important;
   color:#fff;
 }
@@ -526,18 +527,18 @@
 }
 
 .sidebar-menu ul > li > a .arrow:before,
-.sidebar-menu > ul > li > a .arrow.open:before {  
+.sidebar-menu > ul > li > a .arrow.open:before {
    color: @sidebar-icons !important;
 }
 
 /*.sidebar-menu ul > li.active > a .arrow:before,
-.sidebar-menu > ul > li.active > a .arrow.open:before {  
+.sidebar-menu > ul > li.active > a .arrow.open:before {
    color: #fff !important;
 } */
 
 .sidebar-menu > ul > li > ul.sub > li > a {
   color: @sidebar-font-color;
-  margin-left:0px;  
+  margin-left:0px;
   padding-left: 5px;
   font-size: 13px;
   font-weight: 400;
@@ -547,10 +548,10 @@
   border-top: 0px !important;
 }
 
-.sidebar-menu > ul > li > ul.sub > li.active > a, 
+.sidebar-menu > ul > li > ul.sub > li.active > a,
 .sidebar-menu > ul > li > ul.sub > li > a:hover,
 .sidebar-menu > ul > li > ul.sub > li.current {
-  background: lighten(@sidebar-sub, 5%) !important;  
+  background: lighten(@sidebar-sub, 5%) !important;
 }
 
 .sidebar-menu > ul > li > ul.sub > li > a:hover,{
@@ -569,7 +570,7 @@
 		width: 90%;
 		margin: 0 auto 10px;
 		padding-right: 30px !important;
-		
+
 	}
 	.search-icon {
 		display: block;
@@ -623,26 +624,35 @@
 	text-align: center;
     width: 50px;
 }
-	/* Sidebar collapse */
+/* Sidebar collapse */
 .sidebar-collapse, .switcher {
-    padding: 10px 10px 0 0;
-    position: absolute;
-	top: 10px;
-	left: 10px;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    background: -webkit-linear-gradient(left top, #C3E65F, #67C321); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #C3E65F, #67C321); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #C3E65F, #67C321); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #C3E65F, #67C321);
+  	border: 0;
+    border-radius: 0;
     color: #FFFFFF;
-    padding: 6px 8px;
+    padding: 10px 10px 0 0;
+    width: 50px;
+    height: 100%;
+    font-size: 28px;
+    &:focus {
+      background: -webkit-linear-gradient(left top, #67C321, #C3E65F ); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(bottom right, #67C321, #C3E65F); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(bottom right, #67C321, #C3E65F); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom right, #67C321, #C3E65F);
+    }
 }
 .sidebar-collapse:hover, .switcher:hover {
 	background-color: darken(@navbar-primary, 5%);
 }
 .sidebar-collapse > [class*="fa-"] , .switcher > [class*="fa-"]{
 	color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 5px;
-    position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+  position: relative;
 	float: right;
 }
 .menu-text {
@@ -712,10 +722,10 @@
 .mini-menu#sidebar .sidebar-menu > ul > li:hover > ul.sub {
     display: block !important;
 }
-.mini-menu#sidebar .sidebar-menu ul > li > a .arrow:before {  
+.mini-menu#sidebar .sidebar-menu ul > li > a .arrow:before {
    display: none;
 }
-.mini-menu#sidebar .sidebar-menu > ul > li > a .arrow.open:before {   
+.mini-menu#sidebar .sidebar-menu > ul > li > a .arrow.open:before {
    display: none;
 }
 .mini-menu#sidebar .quicklaunch-mini {
@@ -739,7 +749,7 @@
 	.btn {
 		margin-right: 0.25rem;
 	}
-	
+
 }
 .mini-menu#sidebar  #quicklaunch:hover .quicklaunch-lg {
     display: block;

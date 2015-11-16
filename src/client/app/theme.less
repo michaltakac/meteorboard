@@ -1,6 +1,6 @@
 @import '../../../node_modules/bootstrap-less/bootstrap/bootstrap.less';
 /* Colors */
-@navbar-primary:        #5E87B0;
+@navbar-primary:        #FFFFFF;
 @sidebar-primary:       #F4F4F4;
 @sidebar-border-bottom: #FFFFFF;
 @sidebar-border-top:    #E7E7E7;
@@ -37,7 +37,7 @@ html, body {
     height: 100%;
 }
 body {
-  background: none repeat scroll 0 0 @sidebar-primary;
+  background: none repeat scroll 0 0 darken(@navbar-primary, 4%);
   border: 0 none;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 13px;
@@ -262,11 +262,12 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
 
 /* Content */
 #content {
-    background-color: @content-color;
-    margin-top: 0;
-    min-height: 800px;
+  background-color: @content-color;
+  margin-top: 0;
+  min-height: 800px;
   border-left: 1px solid @item-border;
   padding-bottom: 30px;
+  float: none !important;
   /* Page Header */
   .page-header {
     background: none repeat scroll 0 0 #FFFFFF;
