@@ -102,6 +102,23 @@ export default {
       }
     ],
     infoHtml: '<a href="https://github.com/este/este">Este.js</a> dev stack.',
+    stubData: [
+      {
+        firstName: 'Mark',
+        lastName: 'Otto',
+        username: '@mdo'
+      },
+      {
+        firstName: 'Jacob',
+        lastName: 'Thornton',
+        username: '@fat'
+      },
+      {
+        firstName: 'Larry',
+        lastName: 'Bird',
+        username: '@twitter'
+      },
+    ],
     title: 'Meteorboard',
     toCheck: {
       andMuchMore: 'And much more :-)',

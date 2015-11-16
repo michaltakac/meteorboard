@@ -1,10 +1,11 @@
+import Box from '../app/components/Box.react';
 import Component from 'react-pure-render/component';
 import DocumentTitle from 'react-document-title';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../app/components/PageHeader.react';
-import {FormattedHTMLMessage} from 'react-intl';
+//import {FormattedHTMLMessage} from 'react-intl';
 import {Link} from 'react-router';
 
 export default class Page extends Component {
@@ -17,6 +18,14 @@ export default class Page extends Component {
 
   render() {
     const {msg: {home: msg}} = this.props;
+    const tableData = msg.stubData.map(({firstName, lastName, username}, i) =>
+        <tr>
+          <td>{i + 1}</td>
+          <td>{firstName}</td>
+          <td>{lastName}</td>
+          <td>{username}</td>
+        </tr>
+      );
 
     return (
       <DocumentTitle title={msg.title}>
@@ -25,35 +34,39 @@ export default class Page extends Component {
             <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
           </Row>
           <Row>
-            <Col md={12}>
-              <div className="home-page">
-                <p>
-                  <FormattedHTMLMessage defaultMessage={msg.infoHtml} />
-                </p>
-                <div className="tocheck">
-                  <h2>{msg.toCheck.h2}</h2>
-                  <ul>
-                    {msg.toCheck.list.map(({key, text}) =>
-                      <li key={key}>
-                        <FormattedHTMLMessage defaultMessage={text} />
-                      </li>
-                    )}
-                    <li>
-                      {msg.toCheck.isomorphicPage}{' '}
-                      <Link to="/this-is-not-the-web-page-you-are-looking-for">404</Link>
-                    </li>
-                    <li>
-                      {msg.toCheck.andMuchMore}
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <Col sm={6}>
+              <Box bodyClass='box-body big'
+                   title='Basic form elements'
+                   titleClass='box border'>
+                dfbb
+              </Box>
+            </Col>
+            <Col sm={6}>
+              <Panel>
+                <Table bordered condensed hover striped>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {tableData}
+                  </tbody>
+                </Table>
+              </Panel>
             </Col>
           </Row>
           <FooterTools />
         </div>
       </DocumentTitle>
     );
+  }
+
+  stubData() {
+
   }
 
 }
