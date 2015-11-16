@@ -3,6 +3,7 @@
 
 import './main.less';
 import Component from 'react-pure-render/component';
+import constructSidebarMenu from '../../common/lib/constructSidebarMenu';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './Header.react';
 import Sidebar from './components/Sidebar.react';
@@ -28,27 +29,29 @@ export default class App extends Component {
     users: PropTypes.object.isRequired
   }
 
-  getMenu(title, link, children = [], icon = null, isActive = false, isChildActive = false) {
-    const uuid =  Math.random();
+  mainMenu() {
+    const menuTitle = 'Main menu';
+    const subMenu = constructSidebarMenu('Link', 'something', [], null, true);
+    const menuItems = [
+      constructSidebarMenu('Post', null, [subMenu], 'fa fa-file-text fa-fw', false, false),
+      constructSidebarMenu('Widgets', '/widgets', [], 'fa fa-th-large fa-fw', false),
+      constructSidebarMenu('Forms', '/forms', [], 'fa fa-pencil-square-o fa-fw', false)
+    ];
+    // Inject menu items into menu.
+    const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
 
-    return {
-      uuid: uuid,
-      title: () => title,
-      isActive: () => isActive,
-      isChildActive: () => isChildActive,
-      link: () => link,
-      icon: () => icon,
-      hasChild: () => !!children.length,
-      children: () => children
-    };
+    return menu;
   }
 
-  createMenu() {
-    let subMenu = this.getMenu('Link', 'something', [], null, true);
-    let child1 = this.getMenu('Post', null, [subMenu], 'fa fa-file-text fa-fw', false, false);
-    let child2 = this.getMenu('Widgets', '/widgets', [], 'fa fa-th-large fa-fw', false);
-    let child3 = this.getMenu('Forms', '/forms', [], 'fa fa-pencil-square-o fa-fw', false);
-    let menu = this.getMenu('Menu', null, [child1, child2, child3], null, false, true);
+  profileMenu() {
+    const menuTitle = 'Profile menu';
+    const menuItems = [
+      constructSidebarMenu('Profile', null, [], 'fa fa-file-text fa-fw', false, false),
+      constructSidebarMenu('Settings', null, [], 'fa fa-th-large fa-fw', false),
+      constructSidebarMenu('Invoices', null, [], 'fa fa-pencil-square-o fa-fw', false)
+    ];
+    // Inject menu items into menu.
+    const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
 
     return menu;
   }
@@ -61,8 +64,8 @@ export default class App extends Component {
 
     return (
       <div>
-        <Header actions={actions} msg={msg} pathname={pathname} viewer={viewer} ui={ui} />
-        <Sidebar location={pathname} menuViews={this.createMenu()} ui={ui} />
+        <Header actions={actions} msg={msg} pathname={pathname} ui={ui} viewer={viewer} />
+        <Sidebar location={pathname} mainMenu={this.mainMenu()} profileMenu={this.profileMenu()} ui={ui} />
         {/* Pass data-pathname to allow route specific styling. */}
         <section id='page'>
           <div className={className} id='main-content'>

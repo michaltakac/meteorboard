@@ -6,7 +6,8 @@ export default class Sidebar extends Component {
 
   static propTypes = {
     location: PropTypes.string.isRequired,
-    menuViews: PropTypes.object.isRequired,
+    mainMenu: PropTypes.object.isRequired,
+    profileMenu: PropTypes.object.isRequired,
     ui: PropTypes.object.isRequired
   }
 
@@ -14,7 +15,10 @@ export default class Sidebar extends Component {
     const pathname = this.props.location;
     const sidebarOpen = this.props.ui.isSideMenuOpen;
     const miniMenu = sidebarOpen ? 'sidebar mini-menu' : 'sidebar';
-    const menuViews = this.props.menuViews.children()
+    const mainMenu = this.props.mainMenu.children()
+      .map((menu, i) => <SidebarProfileMenu key={i} location={pathname} menu={menu} />);
+
+    const profileMenu = this.props.profileMenu.children()
       .map((menu, i) => <SidebarProfileMenu key={i} location={pathname} menu={menu} />);
 
     return (
@@ -23,7 +27,10 @@ export default class Sidebar extends Component {
         <div className="sidebar-menu nav-collapse">
           <div className="divide-20"></div>
           <ul /*className="nav nav-sidebar"*/>
-            {menuViews}
+            {profileMenu}
+            <div className='divide-20'></div>
+            {mainMenu}
+            <div className='divide-20'></div>
             <li className="has-sub">
               <a className="" href="#">
               <i className="fa fa-map-marker fa-fw"></i> <span className="menu-text">Maps</span>
