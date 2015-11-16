@@ -83,13 +83,13 @@ export default class Page extends Component {
                    title='Column sizing'
                    titleClass='box border purple'>
                 <Row>
-                  <Col xs="2">
+                  <Col xs={2}>
                     <Input placeholder=".col-xs-2" type="text" />
                   </Col>
-                  <Col xs="3">
+                  <Col xs={3}>
                     <Input placeholder=".col-xs-3" type="text" />
                   </Col>
-                  <Col xs="4">
+                  <Col xs={4}>
                     <Input placeholder=".col-xs-4" type="text" />
                   </Col>
                 </Row>
@@ -163,7 +163,7 @@ export default class Page extends Component {
                    icon='fa fa-bars'
                    title='Form states'
                    titleClass='box border orange'>
-
+                   ydsdbdbsdb
               </Box>
             </Col>
           </Row>
