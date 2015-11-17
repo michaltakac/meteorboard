@@ -5,8 +5,9 @@ import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../app/components/PageHeader.react';
+import {Line} from 'react-chartjs';
 //import {FormattedHTMLMessage} from 'react-intl';
-import {Link} from 'react-router';
+//import {Link} from 'react-router';
 
 export default class Page extends Component {
 
@@ -38,7 +39,10 @@ export default class Page extends Component {
               <Box bodyClass='box-body big'
                    title='Basic form elements'
                    titleClass='box border'>
-                dfbb
+                <div className='chart'>
+                  <Line data={msg.charts.lineChart.chartData}
+                        options={msg.charts.lineChart.chartOptions} />
+                </div>
               </Box>
             </Col>
             <Col sm={6}>
@@ -63,10 +67,6 @@ export default class Page extends Component {
         </div>
       </DocumentTitle>
     );
-  }
-
-  stubData() {
-
   }
 
 }
