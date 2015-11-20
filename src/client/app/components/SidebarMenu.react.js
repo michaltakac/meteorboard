@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {Collapse} from 'react-bootstrap';
 
-export default class SidebarProfileMenu extends React.Component {
+export default class SidebarMenu extends React.Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +12,7 @@ export default class SidebarProfileMenu extends React.Component {
 
   }
 
-  static propTypes ={
+  static propTypes = {
     location: PropTypes.string.isRequired,
     menu: PropTypes.object.isRequired
   }
@@ -72,7 +72,7 @@ export default class SidebarProfileMenu extends React.Component {
 
       for (let i in children) {
         child = children[i];
-        childrenElements.push(<SidebarProfileMenu key={child.uuid} location={path} menu={child} />);
+        childrenElements.push(<SidebarMenu key={child.uuid} location={path} menu={child} />);
       }
 
       childrenContainer = (

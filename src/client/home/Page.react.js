@@ -37,12 +37,13 @@ export default class Page extends Component {
         </Row>
         <Row>
           <Col sm={6}>
-            <Box bodyClass='box-body big'
-                 title='Basic form elements'
-                 titleClass='box border'>
+            <Box
+              bodyClass='box-body big'
+              title='Basic form elements'
+              titleClass='box border'
+            >
               <div className='chart'>
-                <Line data={ChartsSettings.lineChart.data}
-                      options={ChartsSettings.lineChart.options} />
+                <Line data={ChartsSettings.lineChart.data} options={ChartsSettings.lineChart.options} />
               </div>
             </Box>
           </Col>

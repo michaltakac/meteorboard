@@ -1,4 +1,3 @@
-import DocumentTitle from 'react-document-title';
 import Html from './Html.react';
 import Promise from 'bluebird';
 import React from 'react';
@@ -84,7 +83,7 @@ function renderPage(store, renderProps, req) {
       bodyHtml={`<div id="app">${appHtml}</div>${scriptHtml}`}
       googleAnalyticsId={config.googleAnalyticsId}
       isProduction={config.isProduction}
-      title={DocumentTitle.rewind()}
+      title='Meteorboard'
     />
   );
 }

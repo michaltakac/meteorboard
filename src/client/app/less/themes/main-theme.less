@@ -45,22 +45,6 @@
     border-radius: 0;
     margin: 0 0 0 225px;
     height: 50px;
-    .navbar-brand {
-        background-color: @navbar-secondary;
-        float: left;
-        font-size: 18px;
-        line-height: 20px;
-        padding: 15px;
-        width: 250px;
-        img {
-            position: absolute;
-            max-width: 60%;
-            height: 30px;
-            width: 120px;
-            top: 8px;
-            left: 60px;
-        }
-    }
     .dropdown-toggle {
         color: #69CC30;
         i {
@@ -92,7 +76,7 @@
       width: 60px;
       height: 100%;
       font-size: 46px;
-      a {
+      > a {
         padding-top: 8px;
         padding-bottom: 13px;
         &:hover, &:focus {
@@ -151,6 +135,7 @@
           input {
             border: none;
             padding-top: 15px;
+            color: #999999;
           }
           .input-group .icon-addon .form-control {
               border-radius: 0;
@@ -162,7 +147,7 @@
 
           .icon-addon {
               position: relative;
-              color: #555;
+              color: #999999;
               display: block;
           }
 
@@ -806,3 +791,8 @@
     display: block;
 }
 /* End Sidebar */
+
+/* Charts */
+.chart, .pie, .bars {
+  height: 100%;
+}

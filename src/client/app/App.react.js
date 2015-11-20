@@ -1,7 +1,7 @@
 //import './less/my-bootstrap-theme.less';
 import './main.less';
 import Component from 'react-pure-render/component';
-import constructSidebarMenu from '../../common/lib/constructSidebarMenu';
+import createSidebarMenu from '../../common/lib/createSidebarMenu';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './Header.react';
 import Sidebar from './components/Sidebar.react';
@@ -28,36 +28,78 @@ export default class App extends Component {
   }
 
   mainMenu() {
-    const menuTitle = 'Main menu';
-    const subMenu = [
-      constructSidebarMenu('Submenu 1', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
-      constructSidebarMenu('Submenu 2', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
-      constructSidebarMenu('Submenu 3', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
-    ];
-    const menuItems = [
-      constructSidebarMenu('Dashboard', null, subMenu, 'fa fa-signal fa-fw', false, false),
-      //constructSidebarMenu('Widgets', '/widgets', [], 'fa fa-th-large fa-fw', false, false),
-      //constructSidebarMenu('Forms', '/forms', [], 'fa fa-pencil-square-o fa-fw', false, false)
-    ];
-    // Inject menu items into menu.
-    const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
+    const test = {
+      name: 'Main menu',
+      menuItems: [
+        {
+          title: 'Dashboard',
+          link: null,
+          children: [
+            {
+              title: 'Submenu 1',
+              link: '#',
+              children: [],
+              icon: 'sidebar-sub-link fa fa-circle-thin'
+            },
+            {
+              title: 'Submenu 2',
+              link: '#',
+              children: [],
+              icon: 'sidebar-sub-link fa fa-circle-thin'
+            },
+            {
+              title: 'Submenu 3',
+              link: '#',
+              children: [],
+              icon: 'sidebar-sub-link fa fa-circle-thin'
+            }
+          ],
+          icon: 'fa fa-signal fa-fw'
+        }
+      ]
+    };
 
-    return menu;
+    return createSidebarMenu(test);
   }
 
   profileMenu() {
-    const menuTitle = 'Profile menu';
-    const menuItems = [
-      constructSidebarMenu('Profile', '#', [], 'fa fa-calendar fa-fw', false, false),
-      constructSidebarMenu('Messages', '#', [], 'fa fa-calendar fa-fw', false, false),
-      constructSidebarMenu('Comments', '#', [], 'fa fa-calendar fa-fw', false, false),
-      constructSidebarMenu('Storage', '#', [], 'fa fa-calendar fa-fw', false, false),
-      constructSidebarMenu('Calendar', '#', [], 'fa fa-calendar fa-fw', false, false)
-    ];
-    // Inject menu items into menu.
-    const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
+    const test = {
+      name: 'Profile menu',
+      menuItems: [
+        {
+          title: 'Profile',
+          link: '#',
+          children: [],
+          icon: 'fa fa-calendar fa-fw',
+        },
+        {
+          title: 'Messages',
+          link: '#',
+          children: [],
+          icon: 'fa fa-calendar fa-fw',
+        },
+        {
+          title: 'Comments',
+          link: '#',
+          children: [],
+          icon: 'fa fa-calendar fa-fw',
+        },
+        {
+          title: 'Storage',
+          link: '#',
+          children: [],
+          icon: 'fa fa-calendar fa-fw',
+        },
+        {
+          title: 'Calendar',
+          link: '#',
+          children: [],
+          icon: 'fa fa-calendar fa-fw',
+        }
+      ]
+    };
 
-    return menu;
+    return createSidebarMenu(test);
   }
 
   render() {

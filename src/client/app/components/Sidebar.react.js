@@ -1,6 +1,6 @@
 import Component from 'react-pure-render/component';
 import React, {PropTypes} from 'react';
-import SidebarProfileMenu from './SidebarProfileMenu.react';
+import SidebarMenu from './SidebarMenu.react';
 import {Image} from 'react-bootstrap';
 import {Link} from 'react-router';
 
@@ -18,10 +18,10 @@ export default class Sidebar extends Component {
     const sidebarOpen = this.props.ui.isSideMenuOpen;
     const miniMenu = sidebarOpen ? 'sidebar mini-menu' : 'sidebar';
     const mainMenu = this.props.mainMenu.children()
-      .map((menu, i) => <SidebarProfileMenu key={i} location={pathname} menu={menu} />);
+      .map((menu, i) => <SidebarMenu key={i} location={pathname} menu={menu} />);
 
     const profileMenu = this.props.profileMenu.children()
-      .map((menu, i) => <SidebarProfileMenu key={i} location={pathname} menu={menu} />);
+      .map((menu, i) => <SidebarMenu key={i} location={pathname} menu={menu} />);
 
     return (
 

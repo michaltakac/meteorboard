@@ -1,10 +1,10 @@
 @import '../../../node_modules/bootstrap-less/bootstrap/bootstrap.less';
 /* Colors */
 @navbar-primary:        #FFFFFF;
-@sidebar-primary:       #F4F4F4;
+@sidebar-primary:       #424665;
 @sidebar-border-bottom: #FFFFFF;
 @sidebar-border-top:    #E7E7E7;
-@sidebar-active:        darken(@sidebar-primary, 10%);
+@sidebar-active:        darken(@sidebar-primary, 8%);
 @body-font-color:       #555555;
 @sidebar-font-color:    #555555;
 @sidebar-icons:         #555555;
@@ -2682,10 +2682,10 @@ ul.stats li small {
 }
 /* FOOTER GOTO TOP */
 .footer-tools {
-    display: inline-block;
-    float: right;
+  display: inline-block;
+  float: right;
   .go-top {
-    background-color: darken(@sidebar-primary, 20%);
+    background-color: @sidebar-primary;
     cursor: pointer;
     display: block;
     font-size: 14px;
