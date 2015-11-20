@@ -1,8 +1,7 @@
 import Component from 'react-pure-render/component';
 import React, {PropTypes} from 'react';
-import HeaderButton from './components/HeaderButton.react';
+import HeaderButton from '../components/HeaderButton.react';
 import {Image, NavDropdown, MenuItem} from 'react-bootstrap';
-import {Link} from 'react-router';
 
 export default class Header extends Component {
 
@@ -27,9 +26,11 @@ export default class Header extends Component {
       <header className={navbarClassName} id='header'>
           <div className='nav navbar-nav pull-left hidden-xs' id='navbar-left'>
 
+            {/* Here we call action from onClick event. */}
             <div className='sidebar-collapse btn pull-left' onClick={actions.toggleSideMenu}>
               <i className={arrowOrientation}></i>
             </div>
+
             <div className='header-search form-group'>
               <div className='icon-addon addon-lg'>
                 <input className='form-control' id='search' placeholder='Search...' type='text' />

@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import {Col, Row} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
-import PageHeader from '../app/components/PageHeader.react';
-import Box from '../app/components/Box.react';
+import PageHeader from '../components/PageHeader.react';
+import Box from '../components/Box.react';
 
 export default class Page extends Component {
 

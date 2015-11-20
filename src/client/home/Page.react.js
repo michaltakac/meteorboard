@@ -1,11 +1,11 @@
-import Box from '../app/components/Box.react';
+import Box from '../components/Box.react';
 import ChartsSettings from './charts';
 import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
 import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
-import PageHeader from '../app/components/PageHeader.react';
+import PageHeader from '../components/PageHeader.react';
 import {Line} from 'react-chartjs';
 //import {FormattedHTMLMessage} from 'react-intl';
 //import {Link} from 'react-router';

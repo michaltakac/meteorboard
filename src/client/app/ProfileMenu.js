@@ -1,4 +1,4 @@
-const profileMenu = {
+export default {
   name: 'Profile menu',
   menuItems: [
     {
@@ -12,12 +12,14 @@ const profileMenu = {
       link: '#',
       children: [],
       icon: 'fa fa-envelope-o fa-fw',
+      notificationCount: 4,
     },
     {
       title: 'Comments',
       link: '#',
       children: [],
       icon: 'fa fa-comment-o fa-fw',
+      notificationCount: 19,
     },
     {
       title: 'Storage',
@@ -33,5 +35,3 @@ const profileMenu = {
     }
   ]
 };
-
-export default profileMenu;
