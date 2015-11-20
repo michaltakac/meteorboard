@@ -29,11 +29,15 @@ export default class App extends Component {
 
   mainMenu() {
     const menuTitle = 'Main menu';
-    const subMenu = constructSidebarMenu('Link', 'something', [], null, true);
+    const subMenu = [
+      constructSidebarMenu('Submenu 1', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
+      constructSidebarMenu('Submenu 2', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
+      constructSidebarMenu('Submenu 3', '/#', [], 'sidebar-sub-link fa fa-circle-thin', false, false),
+    ];
     const menuItems = [
-      constructSidebarMenu('Post', null, [subMenu], 'fa fa-file-text fa-fw', false, false),
-      constructSidebarMenu('Widgets', '/widgets', [], 'fa fa-th-large fa-fw', false),
-      constructSidebarMenu('Forms', '/forms', [], 'fa fa-pencil-square-o fa-fw', false)
+      constructSidebarMenu('Dashboard', null, subMenu, 'fa fa-signal fa-fw', false, false),
+      //constructSidebarMenu('Widgets', '/widgets', [], 'fa fa-th-large fa-fw', false, false),
+      //constructSidebarMenu('Forms', '/forms', [], 'fa fa-pencil-square-o fa-fw', false, false)
     ];
     // Inject menu items into menu.
     const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
@@ -44,9 +48,11 @@ export default class App extends Component {
   profileMenu() {
     const menuTitle = 'Profile menu';
     const menuItems = [
-      constructSidebarMenu('Profile', null, [], 'fa fa-file-text fa-fw', false, false),
-      constructSidebarMenu('Settings', null, [], 'fa fa-th-large fa-fw', false),
-      constructSidebarMenu('Invoices', null, [], 'fa fa-pencil-square-o fa-fw', false)
+      constructSidebarMenu('Profile', '#', [], 'fa fa-calendar fa-fw', false, false),
+      constructSidebarMenu('Messages', '#', [], 'fa fa-calendar fa-fw', false, false),
+      constructSidebarMenu('Comments', '#', [], 'fa fa-calendar fa-fw', false, false),
+      constructSidebarMenu('Storage', '#', [], 'fa fa-calendar fa-fw', false, false),
+      constructSidebarMenu('Calendar', '#', [], 'fa fa-calendar fa-fw', false, false)
     ];
     // Inject menu items into menu.
     const menu = constructSidebarMenu(menuTitle, null, menuItems, null, false, true);
@@ -80,14 +86,6 @@ export default class App extends Component {
             </Grid>
           </div>
         </section>
-        {/*<div className='container-fluid' data-pathname={pathname}>
-          <div className='row'>
-            {/* Pathname enforces rerender so activeClassName is updated.
-            <Header msg={msg} pathname={pathname} viewer={viewer} />
-            <RouterHandler {...this.props} />
-            <Footer msg={msg.app.footer} />
-          </div>
-        </div>*/}
       </div>
     );
   }

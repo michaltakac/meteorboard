@@ -27,7 +27,7 @@ export default class Sidebar extends Component {
 
       <div className={miniMenu} id="sidebar">
         <Link to='/'>
-          <Image circle className='profile-pic' src="img/addressbook/3.jpg" />
+          <Image circle className='profile-pic' src="img/profile/twitter-avatar.png" />
         </Link>
         <div className="sidebar-menu nav-collapse">
           <div className="divide-20"></div>
@@ -36,7 +36,7 @@ export default class Sidebar extends Component {
             <div className='divide-20'></div>
             {mainMenu}
             <div className='divide-20'></div>
-            <li className="has-sub">
+            {/*<li className="has-sub">
               <a className="" href="#">
               <i className="fa fa-map-marker fa-fw"></i> <span className="menu-text">Maps</span>
               <span className="arrow"></span>
@@ -65,7 +65,7 @@ export default class Sidebar extends Component {
                 <li><a className="" href="invoice.html"><span className="sub-menu-text">Invoice</span></a></li>
                 <li><a className="" href="orders.html"><span className="sub-menu-text">Orders</span></a></li>
               </ul>
-            </li>
+            </li>*/}
           </ul>
         </div>
       </div>

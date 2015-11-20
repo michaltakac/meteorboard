@@ -1,6 +1,7 @@
 import Box from '../app/components/Box.react';
+import ChartsSettings from './charts';
 import Component from 'react-pure-render/component';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
@@ -29,43 +30,42 @@ export default class Page extends Component {
       );
 
     return (
-      <DocumentTitle title={msg.title}>
-        <div>
-          <Row>
-            <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
-          </Row>
-          <Row>
-            <Col sm={6}>
-              <Box bodyClass='box-body big'
-                   title='Basic form elements'
-                   titleClass='box border'>
-                <div className='chart'>
-                  <Line data={msg.charts.lineChart.chartData}
-                        options={msg.charts.lineChart.chartOptions} />
-                </div>
-              </Box>
-            </Col>
-            <Col sm={6}>
-              <Panel>
-                <Table bordered condensed hover striped>
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Username</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tableData}
-                  </tbody>
-                </Table>
-              </Panel>
-            </Col>
-          </Row>
-          <FooterTools />
-        </div>
-      </DocumentTitle>
+      <div>
+        <Helmet title={msg.title} />
+        <Row>
+          <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
+        </Row>
+        <Row>
+          <Col sm={6}>
+            <Box bodyClass='box-body big'
+                 title='Basic form elements'
+                 titleClass='box border'>
+              <div className='chart'>
+                <Line data={ChartsSettings.lineChart.data}
+                      options={ChartsSettings.lineChart.options} />
+              </div>
+            </Box>
+          </Col>
+          <Col sm={6}>
+            <Panel>
+              <Table bordered condensed hover striped>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableData}
+                </tbody>
+              </Table>
+            </Panel>
+          </Col>
+        </Row>
+        <FooterTools />
+      </div>
     );
   }
 

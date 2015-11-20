@@ -7,15 +7,16 @@ export default class HeaderButton extends Component {
   }
 
   static propTypes = {
-    badgeNumber: PropTypes.number,
-    iconName: PropTypes.string.isRequired
+    headerButtonClass: PropTypes.string,
+    iconName: PropTypes.string.isRequired,
+    notificationCount: PropTypes.number
   }
 
   render() {
     return (
-      <div>
+      <div className={this.props.headerButtonClass}>
         <i className={this.props.iconName}></i>
-        <span className="badge">{this.props.badgeNumber}</span>
+        <span className="badge">{this.props.notificationCount}</span>
       </div>
     );
   }

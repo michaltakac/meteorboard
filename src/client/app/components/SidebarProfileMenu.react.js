@@ -103,11 +103,11 @@ export default class SidebarProfileMenu extends React.Component {
       );
 
     return (
-        <li className={className}>
-          {content}
+      <li className={className}>
+        {content}
 
-          {childrenContainer}
-        </li>
+        {childrenContainer}
+      </li>
     );
   }
 }
