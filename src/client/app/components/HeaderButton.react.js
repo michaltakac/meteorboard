@@ -13,10 +13,16 @@ export default class HeaderButton extends Component {
   }
 
   render() {
+    const {headerButtonClass, iconName, notificationCount} = this.props;
+
+    const notification = notificationCount
+            ? <span className="badge">{this.props.notificationCount}</span>
+            : '';
+
     return (
-      <div className={this.props.headerButtonClass}>
-        <i className={this.props.iconName}></i>
-        <span className="badge">{this.props.notificationCount}</span>
+      <div className={headerButtonClass}>
+        <i className={iconName}></i>
+        {notification}
       </div>
     );
   }

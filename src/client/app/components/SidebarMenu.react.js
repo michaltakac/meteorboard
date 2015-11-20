@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {Collapse} from 'react-bootstrap';
+import NotificationCount from './NotificationCount.react';
 
 export default class SidebarMenu extends React.Component {
   constructor(props) {
@@ -53,6 +54,9 @@ export default class SidebarMenu extends React.Component {
     const menu = this.props.menu;
     const link = menu.link();
     const hasChild = menu.hasChild();
+    const notification = menu.notificationCount()
+            ? <NotificationCount count={menu.notificationCount()} />
+            : '';
     const path = this.props.location;
     let className = (hasChild ? 'has-sub' : '') + (this.isOpen(menu) ? ' active' : '');
     let content;
@@ -90,6 +94,7 @@ export default class SidebarMenu extends React.Component {
         <a href="#" onClick={this.toggleChildren.bind(this)}>
           { icon }
           <span className="menu-text">{ menu.title() }</span>
+          {notification}
           {arrow}
         </a>
       );
@@ -98,6 +103,7 @@ export default class SidebarMenu extends React.Component {
         <Link to={link}>
           { icon }
           <span className="menu-text">{ menu.title() }</span>
+          {notification}
           {arrow}
         </Link>
       );

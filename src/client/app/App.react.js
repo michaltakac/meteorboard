@@ -54,7 +54,8 @@ export default class App extends Component {
               icon: 'sidebar-sub-link fa fa-circle-thin'
             }
           ],
-          icon: 'fa fa-signal fa-fw'
+          icon: 'fa fa-signal fa-fw',
+          notificationCount: 19,
         }
       ]
     };
@@ -77,12 +78,14 @@ export default class App extends Component {
           link: '#',
           children: [],
           icon: 'fa fa-envelope-o fa-fw',
+          notificationCount: 4,
         },
         {
           title: 'Comments',
           link: '#',
           children: [],
           icon: 'fa fa-comment-o fa-fw',
+          notificationCount: 19,
         },
         {
           title: 'Storage',

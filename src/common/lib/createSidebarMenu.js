@@ -24,6 +24,7 @@
 //           ... // rest of your submenu items
 //         ],
 //         icon: 'fa fa-signal fa-fw',
+//         notificationCount: null
 //       },
 //       ... // rest of your main menu items
 //     ]
@@ -42,7 +43,8 @@ export default function createSidebarMenu(menuObject) {
           submenu.icon
         )
       ),
-      menu.icon
+      menu.icon,
+      menu.notificationCount
     )
   );
   // Inject menu items into menu.
@@ -51,7 +53,7 @@ export default function createSidebarMenu(menuObject) {
 }
 
 // Function for constructing sidebar menus.
-function constructMenu(title, link, children = [], icon = null, isActive = false, isChildActive = false) {
+function constructMenu(title, link, children = [], icon = null, notificationCount = false, isActive = false, isChildActive = false) {
   const uuid =  Math.random();
 
   return {
@@ -62,6 +64,7 @@ function constructMenu(title, link, children = [], icon = null, isActive = false
     link: () => link,
     icon: () => icon,
     hasChild: () => !!children.length,
-    children: () => children
+    children: () => children,
+    notificationCount: () => notificationCount
   };
 }

@@ -41,69 +41,49 @@ export default class Header extends Component {
           <ul className='nav navbar-nav pull-right'>
             <NavDropdown className='header-icon header-notifications' eventKey={1} id='header-nottifications' noCaret title={NotificationButton}>
               <li className='dropdown-title'>
-                <span><i className='fa fa-envelope-o'></i> 3 Messages</span>
-                <span className='compose pull-right tip-right' title='Compose message'><i className='fa fa-pencil-square-o'></i></span>
+                <span>Recent activity</span>
               </li>
-              <li>
-                <Link to='#'>
-                  <img src='img/avatars/avatar2.jpg' />
+              <MenuItem href='#'>
+                  <Image src='img/avatars/avatar2.jpg' />
                   <span className='body'>
-                    <span className='from'>Jane Doe</span>
                     <span className='message'>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
+                      @michaltakac started following you.
                     </span>
                     <span className='time'>
-                      <i className='fa fa-clock-o'></i>
-                      <span>Just Now</span>
+                      <span>29 minutes ago.</span>
                     </span>
                   </span>
 
-                </Link>
-              </li>
-              <li>
-                <Link to='#'>
-                  <img src='img/avatars/avatar1.jpg' />
+              </MenuItem>
+              <MenuItem href='#'>
+                  <Image src='img/avatars/avatar1.jpg' />
                   <span className='body'>
-                    <span className='from'>Vince Pelt</span>
                     <span className='message'>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
+                      @michaltakac commented on your profile.
                     </span>
                     <span className='time'>
-                      <i className='fa fa-clock-o'></i>
-                      <span>15 min ago</span>
+                      <span>39 minutes ago</span>
                     </span>
                   </span>
 
-                </Link>
-              </li>
-              <li>
-                <Link to='#'>
-                  <img src='img/avatars/avatar8.jpg' />
+              </MenuItem>
+              <MenuItem href='#'>
+                  <Image src='img/avatars/avatar8.jpg' />
                   <span className='body'>
-                    <span className='from'>Debby Doe</span>
                     <span className='message'>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
+                      @michaltakac added you to "Work" spreadsheet.
                     </span>
                     <span className='time'>
-                      <i className='fa fa-clock-o'></i>
-                      <span>2 hours ago</span>
+                      <span>55 minutes ago</span>
                     </span>
                   </span>
-
-                </Link>
-              </li>
-              <li className='footer'>
-                <a href='#'>See all messages <i className='fa fa-arrow-circle-right'></i></a>
-              </li>
+              </MenuItem>
+              {/*<MenuItem className='footer' href='#'>
+                See all messages <i className='fa fa-arrow-circle-right'></i>
+              </MenuItem>*/}
             </NavDropdown>
             <NavDropdown className='header-icon header-quit' eventKey={2} id='header-quit' noCaret title={QuitButton}>
-              <li>
-                <Link to='#'>
-                  <span className='body'>
-                    Logout
-                  </span>
-                </Link>
-              </li>
+              <MenuItem href='/'>Logout</MenuItem>
             </NavDropdown>
           </ul>
       </header>
