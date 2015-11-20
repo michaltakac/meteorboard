@@ -44,7 +44,7 @@ export default class Header extends Component {
                 <span>Recent activity</span>
               </li>
               <MenuItem href='#'>
-                  <Image src='img/avatars/avatar2.jpg' />
+                  <Image src='img/profile/twitter-avatar.png' />
                   <span className='body'>
                     <span className='message'>
                       @michaltakac started following you.
@@ -56,7 +56,7 @@ export default class Header extends Component {
 
               </MenuItem>
               <MenuItem href='#'>
-                  <Image src='img/avatars/avatar1.jpg' />
+                  <Image src='img/profile/twitter-avatar.png' />
                   <span className='body'>
                     <span className='message'>
                       @michaltakac commented on your profile.
@@ -68,7 +68,7 @@ export default class Header extends Component {
 
               </MenuItem>
               <MenuItem href='#'>
-                  <Image src='img/avatars/avatar8.jpg' />
+                  <Image src='img/profile/twitter-avatar.png' />
                   <span className='body'>
                     <span className='message'>
                       @michaltakac added you to "Work" spreadsheet.

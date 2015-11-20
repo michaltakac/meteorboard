@@ -398,6 +398,7 @@
   background-color: transparent;
   border: 1px solid;
   border-radius: 99px !important;
+  z-index: 100;
 }
 .sidebar-menu > ul {
   list-style: none;
@@ -444,11 +445,11 @@
 .sidebar-menu > ul > li.has-sub  .sub{
     position: relative;
     background: @sidebar-sub;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) inset;
     .has-sub-sub .sub-sub {
-        position: relative;
-        background: @sidebar-sub;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+      position: relative;
+      background: @sidebar-sub;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) inset;
     }
 }
 
@@ -506,7 +507,6 @@
   background: none;
   margin: 0px;
   padding: 0px;
-  margin-top: 1px !important;
 }
 
 .sidebar-menu > ul > li > ul.sub > li > a {
@@ -674,6 +674,15 @@
 .mini-menu#sidebar .profile-pic {
   margin: 15px auto 0;
   max-width: 50px;
+}
+.mini-menu#sidebar .badge {
+  font-size: 11px;
+  padding: 2px 4px 1px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #424665;
+  background: #02CFAB;
 }
 .mini-menu#sidebar:before {
     width: 50px;

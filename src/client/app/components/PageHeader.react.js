@@ -10,6 +10,20 @@ export default class PageHeader extends Component {
     title: PropTypes.string.isRequired
   }
 
+  render() {
+    return (
+      <Col sm={12}>
+        <div className="page-header">
+          <div className="clearfix">
+            <h3 className="content-title pull-left">{this.props.title}</h3>
+          </div>
+          <div className="description">{this.props.description}</div>
+          {this.getmenu()}
+        </div>
+      </Col>
+    );
+  }
+
   hasMenu() {
     return this.props.menu ? true : false;
   }
@@ -30,24 +44,4 @@ export default class PageHeader extends Component {
     return menu;
   }
 
-  render() {
-    return (
-      <Col sm={12}>
-        <div className="page-header">
-          <ul className="breadcrumb">
-            <li>
-              <i className="fa fa-home"></i>
-              <Link to="/">Home</Link>
-            </li>
-            <li>{this.props.title}</li>
-          </ul>
-          <div className="clearfix">
-            <h3 className="content-title pull-left">{this.props.title}</h3>
-          </div>
-          <div className="description">{this.props.description}</div>
-          {this.getmenu()}
-        </div>
-      </Col>
-    );
-  }
 }
