@@ -17,7 +17,7 @@ export default class Header extends Component {
   render() {
     const {msg: {app: {links: msg}}, viewer, actions, ui} = this.props;
     const QuitButton = <HeaderButton iconName='fa fa-power-off' />;
-    const NotificationButton = <HeaderButton iconName='fa fa-envelope' notificationCount={3} />;
+    const NotificationButton = <HeaderButton iconName='fa fa-bell' notificationCount={3} />;
     const arrowOrientation = ui.isSideMenuOpen ? 'fa fa-angle-right' : 'fa fa-angle-left';
     const navbarClassName = ui.isSideMenuOpen
           ? 'navbar clearfix mini-menu-open'
