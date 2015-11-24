@@ -26,6 +26,27 @@ export default {
       ],
       icon: 'fa fa-signal fa-fw',
       notificationCount: 19,
+    },
+    {
+      title: 'Charts',
+      link: '/charts',
+      children: [],
+      icon: 'fa fa-bar-chart fa-fw',
+      notificationCount: null,
+    },
+    {
+      title: 'Forms',
+      link: '/forms',
+      children: [],
+      icon: 'fa fa-pencil-square-o fa-fw',
+      notificationCount: null,
+    },
+    {
+      title: 'Widgets',
+      link: '/widgets',
+      children: [],
+      icon: 'fa fa-star fa-fw',
+      notificationCount: null,
     }
   ]
 };

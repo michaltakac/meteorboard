@@ -6,20 +6,22 @@ import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../components/PageHeader.react';
-import {Line} from 'react-chartjs';
+import {Line} from 'rc-chartjs';
 //import {FormattedHTMLMessage} from 'react-intl';
 //import {Link} from 'react-router';
 
 export default class Page extends Component {
 
   static propTypes = {
+    actions: PropTypes.object.isRequired,
     // Why not PropTypes.object.isRequired? Because:
     // https://github.com/rackt/react-router/issues/1505
-    msg: PropTypes.object
+    msg: PropTypes.object,
+    ui: PropTypes.object.isRequired
   }
 
   render() {
-    const {msg: {home: msg}} = this.props;
+    const {actions, msg: {home: msg}, ui} = this.props;
     const tableData = msg.stubData.map(({firstName, lastName, username}, i) =>
         <tr>
           <td>{i + 1}</td>
@@ -38,9 +40,11 @@ export default class Page extends Component {
         <Row>
           <Col sm={6}>
             <Box
+              actions={actions}
               bodyClass='box-body big'
               title='Basic form elements'
               titleClass='box border'
+              ui={ui}
             >
               <div className='chart'>
                 <Line data={ChartsSettings.lineChart.data} options={ChartsSettings.lineChart.options} />

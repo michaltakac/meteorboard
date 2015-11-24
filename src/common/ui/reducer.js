@@ -2,7 +2,8 @@ import * as actions from './actions';
 import {Record} from 'immutable';
 
 const InitialState = Record({
-  isSideMenuOpen: false
+  isSideMenuOpen: false,
+  isModalOpen: false
 });
 const initialState = new InitialState;
 
@@ -16,8 +17,16 @@ export default function uiReducer(state = initialState, action) {
       return state.set('isSideMenuOpen', !isOpen);
     }
 
-    case actions.TOGGLE_SIDE_MENU:
+    case actions.TOGGLE_SIDE_MENU: 
       return state.update('isSideMenuOpen', isSideMenuOpen => !isSideMenuOpen);
+
+    case actions.ON_MODAL_CHANGE: {
+      const {isOpen} = action.payload;
+      return state.set('isModalOpen', !isOpen);
+    }
+
+    case actions.TOGGLE_MODAL:
+      return state.update('isModalOpen', isModalOpen => !isModalOpen);
 
   }
 

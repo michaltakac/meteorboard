@@ -11,14 +11,14 @@ export default {
       title: 'Messages',
       link: '#',
       children: [],
-      icon: 'fa fa-envelope-o fa-fw',
+      icon: 'fa fa-envelope fa-fw',
       notificationCount: 4,
     },
     {
       title: 'Comments',
       link: '#',
       children: [],
-      icon: 'fa fa-comment-o fa-fw',
+      icon: 'fa fa-comment fa-fw',
       notificationCount: 19,
     },
     {
