@@ -25,7 +25,7 @@ export default class ChatWidget extends Component {
             <h4>{titleIcon}{title}</h4>
           </div>
           <div className="box-chat">
-            <div className="scroller">
+            <div className="scroller" style={{height: '320px'}}>
               <ul className="media-list chat-list">
                 <li className="media">
                   <Link className="pull-left" to="#">
@@ -98,8 +98,8 @@ export default class ChatWidget extends Component {
 
             <div className="chat-form">
               <Input
-                className="form-control"
                 buttonAfter={sendButton}
+                className="form-control"
                 placeholder="Enter message"
                 type="text"
               />

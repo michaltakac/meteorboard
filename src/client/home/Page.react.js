@@ -39,7 +39,7 @@ export default class Page extends Component {
           <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
         </Row>
         <Row>
-          <Col sm={6}>
+          <Col sm={8}>
             <Box
               actions={actions}
               bodyClass='box-body big'
@@ -52,6 +52,17 @@ export default class Page extends Component {
               </div>
             </Box>
           </Col>
+          <Col md={4}>
+            <ChatWidget
+              actions={actions}
+              title='Chat widget'
+              titleClass='box border primary'
+              ui={ui}
+            />
+          </Col>
+        </Row>
+
+        <Row>
           <Col sm={6}>
             <Panel>
               <Table bordered condensed hover striped>
@@ -68,17 +79,6 @@ export default class Page extends Component {
                 </tbody>
               </Table>
             </Panel>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col md={4}>
-            <ChatWidget
-              actions={actions}
-              title='Chat widget'
-              titleClass='box border primary'
-              ui={ui}
-            />
           </Col>
         </Row>
         <FooterTools />
