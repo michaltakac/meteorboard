@@ -134,6 +134,10 @@ export default {
     message: 'The link may be broken, or the page may have been removed.',
     title: 'Page Not Found'
   },
+  tables: {
+    description: 'Sample tables.',
+    title: 'Tables'
+  },
   todos: {
     add100: 'Add 100 Todos',
     clearAll: 'Clear All',
@@ -148,6 +152,7 @@ export default {
     title: 'Todos'
   },
   profile: {
+    description: 'User profile page.',
     title: 'Profile'
   },
   settings: {

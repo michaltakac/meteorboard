@@ -3,7 +3,7 @@ export default {
   menuItems: [
     {
       title: 'Profile',
-      link: '#',
+      link: '/profile',
       children: [],
       icon: 'fa fa-user fa-fw',
     },

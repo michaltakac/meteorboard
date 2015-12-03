@@ -1,4 +1,5 @@
 @import '../../../node_modules/bootstrap-less/bootstrap/bootstrap.less';
+@import (css) "../../../node_modules/react-gemini-scrollbar/node_modules/gemini-scrollbar/gemini-scrollbar.css";
 /* Colors */
 @navbar-primary:        #FFFFFF;
 @sidebar-primary:       #424665;
@@ -67,6 +68,9 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
   .hidden-inline-mobile {
     display: none !important;
   }
+}
+i {
+  margin-right: 5px;
 }
 
 /* Font weight */
@@ -251,8 +255,8 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
 }
 /* Scroller */
 .scroller {
-    margin: 0 !important;
-    padding: 0 12px 0 0 !important;
+  margin: 0 !important;
+  padding: 10px !important;
 }
 
 /* Content */
@@ -428,7 +432,10 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
         color: @box-icon-color;
         margin-right: 5px;
         :hover {
-        color: darken(@box-icon-color, 10%);
+          color: darken(@box-icon-color, 10%);
+        }
+        i {
+          margin-right: 0;
         }
       }
       .label {
@@ -665,7 +672,7 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
   }
 }
 /* Box border */
-.box.border, .box.solid{
+.box.border, .box.solid {
   border: 1px solid #ECECEC;
   border-radius: 4px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
@@ -713,6 +720,16 @@ a:active, a:focus{outline-style: none; -moz-outline-style:none;}
     border-radius: 0 0 4px 4px;
     padding: 10px;
     background-color: #FFFFFF;
+  }
+  .box-chat {
+    border-radius: 0 0 4px 4px;
+    padding: 0;
+    background-color: #FFFFFF;
+    .scroller {
+      height: 450px;
+      overflow-y: scroll;
+      width: 100%;
+    }
   }
   .box-body.big {
     padding: 30px;
@@ -2044,26 +2061,28 @@ div[data-role="editor-toolbar"] {
 }
 /* Chat */
 .chat-form {
-    background-color: @sidebar-sub;
-    clear: both;
-    overflow: hidden;
-    padding: 10px;
+  background-color: #E8E8E8;
+  clear: both;
+  overflow: hidden;
+  padding: 10px 10px 0;
   border-radius: 4px;
 }
 .chat-pop {
-  background-color: @sidebar-primary;
+  background-color: #E8E8E8;
   padding: 8px;
   border-radius: 4px;
   position: relative;
   width: 70%;
   .media-heading {
     font-weight: 400;
+    font-size: 15px;
   }
   &.mod {
-    background-color: @sidebar-active;
+    color: #fff;
+    background-color: @primary-color;
     text-align: right;
   }
-  h4 abbr{
+  h4 .timeago {
     font-size: 11px;
     text-transform: uppercase;
   }
@@ -2071,8 +2090,9 @@ div[data-role="editor-toolbar"] {
     font-size: 13px;
   }
 }
-.chat-list  img {
+.chat-list img {
   border-radius: 99px;
+  max-width: 40px;
 }
 /* Chat widget */
 .chat-widget {

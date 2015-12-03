@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 export default class PageHeader extends Component {
   static propTypes = {
     description: PropTypes.string,
-    menu: PropTypes.object,
+    menu: PropTypes.array,
     title: PropTypes.string.isRequired
   }
 

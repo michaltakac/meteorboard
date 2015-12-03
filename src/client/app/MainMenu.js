@@ -42,6 +42,13 @@ export default {
       notificationCount: null,
     },
     {
+      title: 'Tables',
+      link: '/tables',
+      children: [],
+      icon: 'fa fa-table fa-fw',
+      notificationCount: null,
+    },
+    {
       title: 'Widgets',
       link: '/widgets',
       children: [],

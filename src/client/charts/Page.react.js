@@ -2,7 +2,7 @@ import Box from '../components/Box.react';
 import ChartsSettings from './charts';
 import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
-import {Row, Col, Panel, Table} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../components/PageHeader.react';

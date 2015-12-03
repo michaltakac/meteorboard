@@ -1,5 +1,6 @@
 import Box from '../components/Box.react';
 import ChartsSettings from './charts';
+import ChatWidget from '../components/ChatWidget.react';
 import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
 import {Row, Col, Panel, Table} from 'react-bootstrap';
@@ -67,6 +68,17 @@ export default class Page extends Component {
                 </tbody>
               </Table>
             </Panel>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={4}>
+            <ChatWidget
+              actions={actions}
+              title='Chat widget'
+              titleClass='box border primary'
+              ui={ui}
+            />
           </Col>
         </Row>
         <FooterTools />
