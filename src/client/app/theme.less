@@ -730,6 +730,16 @@ i {
       width: 100%;
     }
   }
+  .box-tasks {
+    border-radius: 0 0 4px 4px;
+    padding: 0;
+    background-color: #FFFFFF;
+    .scroller {
+      overflow-y: scroll;
+      width: 100%;
+      padding: 0 !important;
+    }
+  }
   .box-body.big {
     padding: 30px;
   }
@@ -2103,6 +2113,29 @@ div[data-role="editor-toolbar"] {
   .box {
     margin-bottom: 0px;
   }
+}
+/* Tasks widget */
+.tasks-list {
+  padding-left: 0;
+  list-style: none;
+  &:hover {
+    background: #FBFBFB;
+  }
+}
+.tasks-list-item {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 5px 15px 0;
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    color: #888888;
+  }
+}
+.tasks-list-footer {
+  padding: 10px;
+  background: #E8E8E8;
+  text-align: center;
 }
 /* Address Book */
 #contact-card {

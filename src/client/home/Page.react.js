@@ -5,6 +5,7 @@ import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
 import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
+import TasksWidget from '../components/TasksWidget.react';
 import FooterTools from '../../common/components/FooterTools.react';
 import PageHeader from '../components/PageHeader.react';
 import {Line} from 'rc-chartjs';
@@ -63,7 +64,7 @@ export default class Page extends Component {
         </Row>
 
         <Row>
-          <Col sm={6}>
+          <Col sm={7}>
             <Panel>
               <Table bordered condensed hover striped>
                 <thead>
@@ -79,6 +80,14 @@ export default class Page extends Component {
                 </tbody>
               </Table>
             </Panel>
+          </Col>
+          <Col sm={5}>
+            <TasksWidget
+              actions={actions}
+              title='Tasks widget'
+              titleClass='box border primary'
+              ui={ui}
+            />
           </Col>
         </Row>
         <FooterTools />
