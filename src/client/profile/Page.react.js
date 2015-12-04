@@ -140,7 +140,7 @@ export default class Page extends Component {
                 <span className="title">Profile views</span>
                 <span className="value">354</span>
                 <div className="linechart linechart-lg">
-                  <Sparklines data={[1,3,2.8,4,3,3,4,3.4,5,7.5]} limit={11}>
+                  <Sparklines data={[1,3,2.8,4,3,3,4,3.4,5,7.5]} limit={11} width={70} height={30} margin={0}>
                     <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#03D0AB" }} />
                   </Sparklines>
                 </div>
@@ -149,7 +149,7 @@ export default class Page extends Component {
                 <span className="title">Balance</span>
                 <span className="value"><i className="fa fa-usd"></i>1,890</span>
                 <span className="linechart linechart-lg">
-                  <Sparklines data={[8, 53, 17, 36, 22, 33, 38, 49, 14, 47]} limit={11}>
+                  <Sparklines data={[8, 53, 17, 36, 22, 33, 38, 49, 14, 47]} limit={11} width={70} height={30} margin={0}>
                     <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#A1DD03" }} />
                   </Sparklines>
                 </span>
@@ -158,7 +158,7 @@ export default class Page extends Component {
                 <span className="title">This month's revenue</span>
                 <span className="value"><i className="fa fa-usd"></i>5,225</span>
                 <span className="linechart linechart-lg">
-                  <Sparklines data={[5, 2, 7, 3, 0, 5, 7, 4, 5, 2]} limit={11}>
+                  <Sparklines data={[5, 2, 7, 3, 0, 5, 7, 4, 5, 2]} limit={11} width={70} height={30} margin={0}>
                     <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#F7464A" }} />
                   </Sparklines>
                 </span>
