@@ -2,7 +2,7 @@ import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
 import {Accordion, Alert, Button, Col, Label, Panel, ProgressBar, Row} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
-import FooterTools from '../../common/components/FooterTools.react';
+import FooterTools from '../components/FooterTools.react';
 import PageHeader from '../components/PageHeader.react';
 import Box from '../components/Box.react';
 

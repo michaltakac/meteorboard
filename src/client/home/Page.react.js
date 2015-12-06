@@ -3,12 +3,12 @@ import ChartsSettings from './charts';
 import ChatWidget from '../components/ChatWidget.react';
 import Component from 'react-pure-render/component';
 import Helmet from 'react-helmet';
-import {Row, Col, Panel, Tab, Tabs, Table} from 'react-bootstrap';
+import {Row, Col, Panel, Table} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
 import TasksWidget from '../components/TasksWidget.react';
-import FooterTools from '../../common/components/FooterTools.react';
+import FooterTools from '../components/FooterTools.react';
 import PageHeader from '../components/PageHeader.react';
-import {Bar, Doughnut, Line, Pie} from 'rc-chartjs';
+import {Doughnut, Line, Pie} from 'rc-chartjs';
 import {Sparklines, SparklinesBars} from 'react-sparklines';
 //import {FormattedHTMLMessage} from 'react-intl';
 //import {Link} from 'react-router';
@@ -62,21 +62,27 @@ export default class Page extends Component {
             >
               <Row>
                 <Col sm={4}>
-                  <Sparklines data={[1,3,2.8,4,3,3,4,3.4,5,7.5]} limit={11} width={60} height={30} margin={0}>
-                    <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#03D0AB" }} />
-                  </Sparklines>
+                  <div className="center">
+                    <Sparklines data={[1,3,2.8,4,3,3,4,3.4,5,7.5]} limit={11} width={60} height={30} margin={0}>
+                      <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#03D0AB" }} />
+                    </Sparklines>
+                  </div>
                   <p className="center">500 Visitors</p>
                 </Col>
                 <Col sm={4}>
-                  <Sparklines data={[4,2,2.1,3,2.7,2,4,4.2,3,2.1]} limit={11} width={60} height={30} margin={0}>
-                    <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#A1DD03" }} />
-                  </Sparklines>
+                  <div className="center">
+                    <Sparklines data={[4,2,2.1,3,2.7,2,4,4.2,3,2.1]} limit={11} width={60} height={30} margin={0}>
+                      <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#A1DD03" }} />
+                    </Sparklines>
+                  </div>
                   <p className="center">150 Members</p>
                 </Col>
                 <Col sm={4}>
-                  <Sparklines data={[1,4,5,8,4,7,2,3.4,5,8]} limit={11} width={60} height={30} margin={0}>
-                    <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#F7464A" }} />
-                  </Sparklines>
+                  <div className="center">
+                    <Sparklines data={[1,4,5,8,4,7,2,3.4,5,8]} limit={11} width={60} height={30} margin={0}>
+                      <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#F7464A" }} />
+                    </Sparklines>
+                  </div>
                   <p className="center">13% Bounce</p>
                 </Col>
               </Row>

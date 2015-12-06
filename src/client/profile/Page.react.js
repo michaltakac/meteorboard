@@ -5,7 +5,7 @@ import ChartsSettings from './charts';
 import Helmet from 'react-helmet';
 import {Row, Col, ButtonInput, Input, Panel, Table, Tab, Tabs} from 'react-bootstrap';
 import React, {PropTypes} from 'react';
-import FooterTools from '../../common/components/FooterTools.react';
+import FooterTools from '../components/FooterTools.react';
 import {Link} from 'react-router';
 import {Bar, Doughnut, Pie} from 'rc-chartjs';
 import {Sparklines, SparklinesBars} from 'react-sparklines';
