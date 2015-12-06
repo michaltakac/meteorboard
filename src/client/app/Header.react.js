@@ -24,7 +24,7 @@ export default class Header extends Component {
 
     return (
       <header className={navbarClassName} id='header'>
-          <div className='nav navbar-nav pull-left hidden-xs' id='navbar-left'>
+          <div className='nav navbar-nav pull-left' id='navbar-left'>
 
             {/* Here we call action from onClick event. */}
             <div className='sidebar-collapse btn pull-left' onClick={actions.toggleSideMenu}>

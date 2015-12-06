@@ -1,4 +1,5 @@
 import Component from 'react-pure-render/component';
+import Divider from './Divider.react';
 import React, {PropTypes} from 'react';
 import SidebarMenu from './SidebarMenu.react';
 import {Image} from 'react-bootstrap';
@@ -33,9 +34,9 @@ export default class Sidebar extends Component {
           <div className="divide-20"></div>
           <ul /*className="nav nav-sidebar"*/>
             {profileMenu}
-            <div className='divide-20'></div>
+            <Divider height={20} />
             {mainMenu}
-            <div className='divide-20'></div>
+            <Divider height={20} />
             {/*<li className="has-sub">
               <a className="" href="#">
               <i className="fa fa-map-marker fa-fw"></i> <span className="menu-text">Maps</span>

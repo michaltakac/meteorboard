@@ -1,10 +1,10 @@
 {
   "name": "Meteorboard",
-  "authors": [
-    "Michal Takac"
-  ],
-  "description": "Meteorboard is an admin dashboard written in React using Este.js.",
+  "version": "1.0.0",
   "private": true,
+  "author": "Michal Takáč",
+  "copyright": "Michal Takáč, email: takacmichal92@gmail.com",
+  "description": "Meteorboard is an admin dashboard written in React using Este.js.",
   "scripts": {
     "postinstall": "gulp build --production",
     "start": "node_modules/react-native/packager/packager.sh",

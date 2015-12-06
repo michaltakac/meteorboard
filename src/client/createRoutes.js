@@ -6,6 +6,7 @@ import NotFound from './notfound/Page.react';
 import Profile from './profile/Page.react';
 import React from 'react';
 import Tables from './tables/Page.react';
+import Typography from './ui-elements/Typography.react';
 import Widgets from './widgets/Page.react';
 import {IndexRoute, Route} from 'react-router';
 
@@ -17,6 +18,7 @@ export default function createRoutes(getState) {
       <Route component={Forms} path="forms" />
       <Route component={Profile} path="profile" />
       <Route component={Tables} path="tables" />
+      <Route component={Typography} path="typography" />
       <Route component={Widgets} path="widgets" />
       <Route component={NotFound} path="*" />
     </Route>

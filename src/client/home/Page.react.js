@@ -41,13 +41,12 @@ export default class Page extends Component {
           <PageHeader description={msg.description} menu={msg.menu} title={msg.title} />
         </Row>
         <Row>
-          <Col sm={8}>
+          <Col md={8}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Visualizations'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Line data={ChartsSettings.lineChart.data} options={ChartsSettings.lineChart.options} />
@@ -56,11 +55,10 @@ export default class Page extends Component {
           </Col>
           <Col md={4}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Updates'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Row>
                 <Col sm={4}>
@@ -98,27 +96,24 @@ export default class Page extends Component {
         <Row>
           <Col md={4}>
             <TasksWidget
-              actions={actions}
               title='Tasks'
               titleClass='box border green'
-              ui={ui}
+              {...this.props}
             />
           </Col>
           <Col md={4}>
             <ChatWidget
-              actions={actions}
               title='Chat'
               titleClass='box border red'
-              ui={ui}
+              {...this.props}
             />
           </Col>
           <Col md={4}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Stats'
               titleClass='box border blue'
-              ui={ui}
+              {...this.props}
             >
               <div className="sparkline-row">
                 <span className="title">Profile views</span>
@@ -154,11 +149,10 @@ export default class Page extends Component {
         <Row>
           <Col md={5}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='New users'
               titleClass='box border orange'
-              ui={ui}
+              {...this.props}
             >
               <Table bordered condensed hover striped>
                 <thead>
@@ -175,7 +169,7 @@ export default class Page extends Component {
               </Table>
             </Box>
           </Col>
-          <Col sm={7}>
+          <Col md={7}>
             <Panel>
               <Row>
                 <Col sm={3}>

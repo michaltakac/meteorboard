@@ -8,7 +8,6 @@ export default class Box extends Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     bodyClass: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
     icon: PropTypes.string,
     title: PropTypes.string,
     titleClass: PropTypes.string.isRequired,

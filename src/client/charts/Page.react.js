@@ -30,11 +30,10 @@ export default class Page extends Component {
         <Row>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Line chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Line data={ChartsSettings.lineChart.data} options={ChartsSettings.lineChart.options} />
@@ -43,11 +42,10 @@ export default class Page extends Component {
           </Col>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Bar chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Bar data={ChartsSettings.barChart.data} options={ChartsSettings.barChart.options} />
@@ -58,11 +56,10 @@ export default class Page extends Component {
         <Row>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Radar chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Radar data={ChartsSettings.radarChart.data} options={ChartsSettings.radarChart.options} />
@@ -71,11 +68,10 @@ export default class Page extends Component {
           </Col>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Polar area chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <PolarArea data={ChartsSettings.polarAreaChart.data} options={ChartsSettings.polarAreaChart.options} />
@@ -86,11 +82,10 @@ export default class Page extends Component {
         <Row>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Pie chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Pie data={ChartsSettings.pieChart.data} options={ChartsSettings.pieChart.options} />
@@ -99,11 +94,10 @@ export default class Page extends Component {
           </Col>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Doughnut chart'
               titleClass='box border'
-              ui={ui}
+              {...this.props}
             >
               <div className='chart'>
                 <Doughnut data={ChartsSettings.doughnutChart.data} options={ChartsSettings.doughnutChart.options} />

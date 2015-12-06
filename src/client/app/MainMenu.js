@@ -3,28 +3,29 @@ export default {
   menuItems: [
     {
       title: 'Dashboard',
+      link: '/',
+      children: [],
+      icon: 'fa fa-home fa-fw',
+      notificationCount: null,
+    },
+    {
+      title: 'UI Elements',
       link: null,
       children: [
         {
-          title: 'Submenu 1',
-          link: '#',
+          title: 'Buttons',
+          link: '/buttons',
           children: [],
           icon: 'sidebar-sub-link fa fa-circle-thin'
         },
         {
-          title: 'Submenu 2',
-          link: '#',
-          children: [],
-          icon: 'sidebar-sub-link fa fa-circle-thin'
-        },
-        {
-          title: 'Submenu 3',
-          link: '#',
+          title: 'Typography',
+          link: '/typography',
           children: [],
           icon: 'sidebar-sub-link fa fa-circle-thin'
         }
       ],
-      icon: 'fa fa-signal fa-fw',
+      icon: 'fa fa-desktop fa-fw',
       notificationCount: 19,
     },
     {

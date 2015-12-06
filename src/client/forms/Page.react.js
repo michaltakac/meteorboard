@@ -33,11 +33,10 @@ export default class Page extends Component {
         <Row>
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Basic form elements'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               {/* Basic form example */}
               <h3 className='form-title'>Basic form</h3>
@@ -83,11 +82,10 @@ export default class Page extends Component {
             </Box>
 
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Inline form'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <form className='form-inline' role='form'>
                 <Input placeholder='Enter email' type='email' />
@@ -99,11 +97,10 @@ export default class Page extends Component {
 
           <Col sm={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Form states'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <form className='form-horizontal' role='form'>
                 <Input
@@ -165,11 +162,10 @@ export default class Page extends Component {
             </Box>
 
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Various inputs'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               {/* Inline form example */}
               <form className='form-horizontal' role='form'>

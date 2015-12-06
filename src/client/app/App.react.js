@@ -1,4 +1,3 @@
-import './main.less';
 import Component from 'react-pure-render/component';
 import createSidebarMenu from '../lib/createSidebarMenu';
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -11,6 +10,8 @@ import * as MainMenu from './MainMenu';
 import mapDispatchToProps from '../../common/app/mapDispatchToProps';
 import mapStateToProps from '../../common/app/mapStateToProps';
 import {connect} from 'react-redux';
+// Styles
+import '../stylesheets/main.less';
 
 // // logRenderTime is useful for app with huge UI to check render performance.
 // import logRenderTime from '../lib/logRenderTime';

@@ -158,6 +158,20 @@ export default {
   settings: {
     title: 'Settings'
   },
+  uiElements: {
+    buttons: {
+      description: 'Buttons in Meteorboard.',
+      title: 'Buttons',
+    },
+    sliders: {
+      description: 'Sliders in Meteorboard.',
+      title: 'Sliders',
+    },
+    typography: {
+      description: 'Typography in Meteorboard.',
+      title: 'Typography',
+    },
+  },
   widgets: {
     description: 'Description from Intl...',
     dummyText: 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.',

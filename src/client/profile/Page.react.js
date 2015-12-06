@@ -30,7 +30,7 @@ export default class Page extends Component {
         <Divider height={20} />
 
         <Row>
-          <Col sm={6}>
+          <Col md={6}>
             <Panel>
               <Tabs defaultActiveKey={1}>
                 <Tab eventKey={1} title="Personal info">
@@ -130,11 +130,10 @@ export default class Page extends Component {
 
           <Col md={6}>
             <Box
-              actions={actions}
               bodyClass='box-body big'
               title='Stats'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <div className="sparkline-row">
                 <span className="title">Profile views</span>

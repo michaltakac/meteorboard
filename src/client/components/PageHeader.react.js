@@ -32,8 +32,8 @@ export default class PageHeader extends Component {
     const menu = this.hasMenu()
             ? <div className='page-header-menu'>
                 <ul>
-                {this.props.menu.map((menu) =>
-                  <Link to={menu.link}>
+                {this.props.menu.map((menu, i) =>
+                  <Link key={i+1} to={menu.link}>
                     <li className='page-header-menu-item'>{menu.title}</li>
                   </Link>
                 )}

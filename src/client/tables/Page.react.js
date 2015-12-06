@@ -29,11 +29,10 @@ export default class Page extends Component {
         <Row>
           <Col md={6}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Simple'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Table>
                 <thead>
@@ -80,11 +79,10 @@ export default class Page extends Component {
           </Col>
           <Col md={6}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Striped'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Table striped>
                 <thead>
@@ -134,11 +132,10 @@ export default class Page extends Component {
         <Row>
           <Col md={6}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Bordered, hover'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Table bordered hover>
                 <thead>
@@ -185,11 +182,10 @@ export default class Page extends Component {
           </Col>
           <Col md={6}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Bordered, hover, striped'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Table bordered hover striped>
                 <thead>
@@ -239,11 +235,10 @@ export default class Page extends Component {
         <Row>
           <Col md={12}>
             <Box
-              actions={actions}
               bodyClass='box-body'
               title='Condensed'
               titleClass='box border primary'
-              ui={ui}
+              {...this.props}
             >
               <Table bordered condensed hover striped>
                 <thead>
