@@ -13,12 +13,6 @@ export default {
       link: null,
       children: [
         {
-          title: 'Buttons',
-          link: '/buttons',
-          children: [],
-          icon: 'sidebar-sub-link fa fa-circle-thin'
-        },
-        {
           title: 'Typography',
           link: '/typography',
           children: [],
