@@ -1,15 +1,15 @@
 {
-  "name": "Meteorboard",
+  "name": "meteorboard",
   "version": "1.0.0",
-  "private": true,
-  "author": "Michal Takáč",
-  "copyright": "Michal Takáč, email: takacmichal92@gmail.com",
+  "author": "Michal Takac <takacmichal92@gmail.com>",
+  "license": "MIT",
   "description": "Meteorboard is an admin dashboard written in React using Este.js.",
   "scripts": {
     "postinstall": "gulp build --production",
     "start": "node_modules/react-native/packager/packager.sh",
     "test": "gulp test",
-    "test-jest": "jest"
+    "test-jest": "jest",
+    "build": "NODE_ENV=production gulp build --production"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
@@ -21,7 +21,13 @@
     ]
   },
   "engines": {
-    "node": "4.2.x"
+    "node": "4.x.x"
+  },
+  "now": {
+    "engines": {
+      "node": "4.x.x"
+    },
+    "public": false
   },
   "dependencies": {
     "autoprefixer": "^6.0.2",

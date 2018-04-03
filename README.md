@@ -1,4 +1,6 @@
-# Meteorboard
+# Meteorboard (OUTDATED!)
+
+### DISCLAIMER: I don't maintain this product/repo anymore and, so far, don't plan to in future.
 
 Admin dashboard template written in ReactJS using Redux/Este.js.
 
@@ -101,12 +103,4 @@ Yes. Meteorboard and Este.js makes little assumptions about your stack, and pass
 #### Why Este.js is pure and why we have to pass data through props?
 Pure means no side effects. Programming without side effects rocks. It allows us to hot reload everything and testing is much easier as well. When component renders only data passed through props, [shouldComponentUpdate](https://facebook.github.io/react/docs/component-specs.html#updating-shouldcomponentupdate) can be implemented [only once](https://github.com/este/este/blob/d08556dd1e4d57b4c0e605e3395ce6af9963910e/src/client/components/component.react.js#L14) per whole app. One can say it's verbose, but it isn't. It's explicit. And remember, we have to pass only data going to be rendered. Actions have access to app state.
 
-## Training
-- [learn-reactjs.com](http://www.learn-reactjs.com)
-- [javascript-skoleni.cz](http://javascript-skoleni.cz)
-- [DzejEs.cz](http://www.dzejes.cz) - czech articles about Este
 
-## Notes
-
-- Meteorboard dev stack works on OSX, Linux, and Windows.
-- Meteorboard supports all evergreen browsers plus last two pieces of IE.
